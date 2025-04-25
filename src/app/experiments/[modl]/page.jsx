@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useParams } from 'next/navigation';
 import Heading from '@/app/components/Heading/Heading';
 
-export default function homs() {
+export default function Modl() {
   const [code , setCode] = useState('');
 
   const params = useParams()
@@ -22,6 +22,7 @@ export default function homs() {
       a.click();
 
       URL.revokeObjectURL(url);
+      setCode("")
     }
   }
 
