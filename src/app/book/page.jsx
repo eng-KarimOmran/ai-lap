@@ -9,16 +9,17 @@ export default function Book() {
 
     const settings = {
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        rtl: true,
         appendDots: dots => (
           <div
             style={{
-              backgroundColor: "black",
+              backgroundColor: "transparent",
               borderRadius: "10px",
-              padding: "10px"
+              padding: "10px",
             }}
           >
             <ul style={{ margin: "0px" }}> {dots} </ul>
@@ -32,7 +33,7 @@ export default function Book() {
               border: "1px #F18DF2 solid"
             }}
           >
-            {i + 1}
+            {(13 - i).toString().replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d])}
           </div>
         )
       };
@@ -40,8 +41,8 @@ export default function Book() {
   return (
     <section className='py-7'>
         <Heading heading={"Book"} />
-        <div className='lg:max-w-[50%] max-w-[90%] mx-auto px-2 mt-2'>
-          <Slider {...settings} className='text-center'>
+        <div className='lg:max-w-[50%] max-w-[90%] mx-auto px-2'>
+          <Slider {...settings} className='text-center pb-10'>
             <div className='bg-gray-300 rounded-xl overflow-hidden'>
               <img className='w-full rounded-xl object-center object-cover block' src="/book/Plug_compressed_pages-to-jpg-0001.jpg" />
             </div>

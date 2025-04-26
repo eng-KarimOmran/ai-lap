@@ -1,1 +1,5 @@
 @import "tailwindcss";
+.slick-dots li.slick-active div {
+    background-color: #F18DF2;
+    color: white !important;
+}
