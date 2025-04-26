@@ -14,7 +14,7 @@ export default function Experiments() {
         <div className='flex justify-around py-5 items-center flex-col lg:flex-row gap-7 flex-wrap'>
             {
                 experiments.map((experiment)=>(
-                    <Link href={experiment.path} key={experiment.path} className='bg-black border-2 border-gray-100 shadow-2xl max-w-[300px] overflow-hidden flex flex-col p-2 rounded-2xl grayscale-50 hover:scale-[1.05] hover:grayscale-0 transition-all duration-300 group'>
+                    <Link href={experiment.path} key={experiment.path} className='bg-black border-2 border-gray-100 shadow-2xl max-w-[300px] overflow-hidden flex flex-col p-2 rounded-2xl lg:grayscale-50 hover:scale-[1.05] hover:grayscale-0 transition-all duration-300 group'>
                         <img src={experiment.imgPath} className='w-full max-h-[200px] block object-cover rounded-2xl object-center group-hover:rotate-[360deg] transition-all duration-300' />
                         <h2 className='text-white text-3xl font-bold'>{experiment.name}</h2>
                         <p className='w-full text-gray-400'>{experiment.description}</p>
