@@ -13,8 +13,6 @@ export default function Book() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
         appendDots: dots => (
           <div
             style={{
@@ -42,7 +40,7 @@ export default function Book() {
   return (
     <section className='py-7'>
         <Heading heading={"Book"} />
-        <div className='lg:max-w-[50%] max-w-[95%] mx-auto px-2 mt-2'>
+        <div className='lg:max-w-[50%] max-w-[90%] mx-auto px-2 mt-2'>
           <Slider {...settings} className='text-center'>
             <div className='bg-gray-300 rounded-xl overflow-hidden'>
               <img className='w-full rounded-xl object-center object-cover block' src="/book/Plug_compressed_pages-to-jpg-0001.jpg" />
